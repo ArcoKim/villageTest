@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="src/fontawesome-free-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            #dscrpt {
+                font-size: 15px;
+                width: 75%;
+            }
+            .buttonTxt {
+                font-size: 20px;
+            }
+            .buttonWithI {
+                width: 150px;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 1000px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            h3 {
+                font-size: 25px;
+            }
+            #dscrpt {
+                font-size: 20px;
+            }
+            .buttonTxt {
+                font-size: 30px;
+            }
+            .buttonWithI {
+                width: 200px;
+            }
+        }
+    </style>
+    <script defer src="security.js"></script>
+    <script defer src="main.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60174caba1dbe37d"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>카트라이더 붐힐 테스트</title>
+</head>
+<body>
+    <div class="title">
+        <div class="flexTitle">
+            <h1 class="h1T yellowT">카트라이더</h1><h1 class="h1T greenT">붐힐</h1><h1 class="h1T yellowT" id="endT">테스트</h1>
+        </div>
+        <h2 class="h2T greenT">내 특징과 닮은 붐힐 라이더는?</h2>
+    </div>
+    <!--on NEXON DEVELOPERS-->
+    <div class="reImgDiv">
+        <img src="" alt="" id="reImg">
+    </div>
+    <!--on NEXON DEVELOPERS-->
+    <h2 id="reName"></h2>
+    <h2 id="reScore"></h2>
+    <p id="dscrpt"></p>
+    <div class="rsltBtn">
+        <button class="buttonWithI nmg" onclick="location.href = 'index.html';">
+            <i class="fas fa-home"></i>
+            <p class="buttonTxt">처음으로</p>
+        </button>
+        <div class="addthis_inline_share_toolbox"></div>
+    </div>
+    <div id="piechart"></div>
+    <p class="chartAlert">※ 0점과 음수는 차트에 포함되지 않습니다.</p>
+    <div class="editerDiv">
+        <p class="editer">아르코 ARCO</p>
+        <a class="help" href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank">제작도움: 조코딩 유튜브 채널</a>
+    </div>
+    <div id="ad-banner">
+        <script>
+            if ( window.matchMedia( '( min-width: 1024px )' ).matches == true ) {
+                document.write(`<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "${keys.resultAd[0]}" data-ad-width = "728" data-ad-height = "90"></ins>`);
+                document.getElementById("ad-banner").style.width = "728px";
+            }
+            if ( window.matchMedia( '( max-width: 768px )' ).matches == true ) {
+                document.write(`<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "${keys.resultAd[1]}" data-ad-width = "320" data-ad-height = "100"></ins>`);
+                document.getElementById("ad-banner").style.width = "320px";
+            }
+        </script>
+    </div>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <script>
+        if (sessionStorage.length <= 1) {
+            alert("잘못된 접근입니다.");
+            location.href = "index.html";
+        }
+        else {
+            result();
+        }
+    </script>
+</body>
+</html>

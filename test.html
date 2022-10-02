@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="src/fontawesome-free-5.15.1-web/css/all.css">
+    <style>
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .question {
+                font-size: 17px;
+            }
+            .answer {
+                font-size: 15px;
+            }
+            input[type=radio] {
+                width: 15px;
+                height: 15px;
+                border: 1px solid black;;
+            }
+            .questionDiv {
+                width: 95%;
+            }
+            .buttonTxt {
+                font-size: 30px;
+            }
+            .buttonWithI {
+                width: 200px;
+            }
+        }
+        @media (min-width: 481px) and (max-width: 1000px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            input[type=radio] {
+                width: 25px;
+                height: 25px;
+                border: 1px solid black;;
+            }
+            .questionDiv {
+                width: 80%;
+            }
+        }
+    </style>
+    <script defer src="security.js"></script>
+    <script defer src="main.js"></script>
+    <title>카트라이더 붐힐 테스트</title>
+</head>
+<body>
+    <div class="title">
+        <div class="flexTitle">
+            <h1 class="h1T yellowT">카트라이더</h1><h1 class="h1T greenT">붐힐</h1><h1 class="h1T yellowT" id="endT">테스트</h1>
+        </div>
+        <h2 class="h2T greenT">내 특징과 닮은 붐힐 라이더는?</h2>
+    </div>
+    <div class="questionDiv">
+        <button class="goBtn" id="previous" onclick="previous();"><i class="fas fa-caret-left" id="left"></i></button>
+        <div class="questions">
+            <div id="qline1">
+                <div class="questionAndAnswer">
+                    <p class="question">1. 모든 일에 긍정적이다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio1" id="r11">
+                            <label for="r11" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="r12">
+                            <label for="r12" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="r13">
+                            <label for="r13" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio1" id="r14">
+                            <label for="r14" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">2. 캐릭터나 물건 등을 꾸미고 정비하는 것을 좋아한다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio2" id="r21">
+                            <label for="r21" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio2" id="r22">
+                            <label for="r22" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio2" id="r23">
+                            <label for="r23" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio2" id="r24">
+                            <label for="r24" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">3. 나의 경험들을 보면 잘하는 일들은 재능보다 노력이 필요하다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio3" id="r31">
+                            <label for="r31" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio3" id="r32">
+                            <label for="r32" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio3" id="r33">
+                            <label for="r33" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio3" id="r34">
+                            <label for="r34" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">4. 자신의 일에 진지하게 임한다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio4" id="r41">
+                            <label for="r41" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio4" id="r42">
+                            <label for="r42" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio4" id="r43">
+                            <label for="r43" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio4" id="r44">
+                            <label for="r44" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">5. 가끔 현실을 벗어나는 생각을 하거나 예술 활동들을 즐긴다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio5" id="r51">
+                            <label for="r51" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio5" id="r52">
+                            <label for="r52" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio5" id="r53">
+                            <label for="r53" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio5" id="r54">
+                            <label for="r54" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">6. 주변 사람들에게 외모나 행동들이 귀엽다는 말을 듣는다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio6" id="r61">
+                            <label for="r61" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio6" id="r62">
+                            <label for="r62" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio6" id="r63">
+                            <label for="r63" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio6" id="r64">
+                            <label for="r64" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="qline2">
+                <div class="questionAndAnswer">
+                    <p class="question">7. 친구한테 인간관계보다 지식을 가르쳐 주는 것에 더 능숙하다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio7" id="r71">
+                            <label for="r71" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio7" id="r72">
+                            <label for="r72" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio7" id="r73">
+                            <label for="r73" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio7" id="r74">
+                            <label for="r74" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">8. 계획을 세워도 오래가지 못한다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio8" id="r81">
+                            <label for="r81" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio8" id="r82">
+                            <label for="r82" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio8" id="r83">
+                            <label for="r83" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio8" id="r84">
+                            <label for="r84" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">9. 말다툼에서 상대를 이기는 것보다 상대를 이해시키는 것이 중요하다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio9" id="r91">
+                            <label for="r91" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio9" id="r92">
+                            <label for="r92" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio9" id="r93">
+                            <label for="r93" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio9" id="r94">
+                            <label for="r94" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">10. 주변 사람들의 부탁을 잘 거절하지 못하고 들어준다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio10" id="r101">
+                            <label for="r101" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio10" id="r102">
+                            <label for="r102" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio10" id="r103">
+                            <label for="r103" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio10" id="r104">
+                            <label for="r104" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">11. 주로 상대방이 먼저 대화를 시작하거나 다가간다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio11" id="r111">
+                            <label for="r111" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio11" id="r112">
+                            <label for="r112" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio11" id="r113">
+                            <label for="r113" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio11" id="r114">
+                            <label for="r114" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="questionAndAnswer">
+                    <p class="question">12. 과정보다는 결과가 중요하다.</p>
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio12" id="r121">
+                            <label for="r121" class="answer">매우 그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio12" id="r122">
+                            <label for="r122" class="answer">그렇다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio12" id="r123">
+                            <label for="r123" class="answer">그렇지 않다</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio12" id="r124">
+                            <label for="r124" class="answer">매우 그렇지 않다</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="goBtn" id="next" onclick="next();"><i class="fas fa-caret-right" id="right"></i></button>
+    </div>
+    <div id="endBtn">
+        <button class="buttonWithI" onclick="toResult();">
+            <i class="fas fa-poll-h"></i>
+            <p class="buttonTxt">결과 확인</p>
+        </button>
+    </div>
+    <p id="pgNum">페이지 1</p>
+    <div class="editerDiv">
+        <p class="editer">아르코 ARCO</p>
+        <a class="help" href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" target="_blank">제작도움: 조코딩 유튜브 채널</a>
+    </div>
+    <div id="ad-banner">
+        <script>
+            if ( window.matchMedia( '( min-width: 1024px )' ).matches == true ) {
+                document.write(`<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "${keys.testAd[0]}" data-ad-width = "728" data-ad-height = "90"></ins>`);
+                document.getElementById("ad-banner").style.width = "728px";
+            }
+            if ( window.matchMedia( '( max-width: 768px )' ).matches == true ) {
+                document.write(`<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "${keys.testAd[1]}" data-ad-width = "320" data-ad-height = "100"></ins>`);
+                document.getElementById("ad-banner").style.width = "320px";
+            }
+        </script>
+    </div>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</body>
+</html>

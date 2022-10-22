@@ -19,6 +19,7 @@
 
 # Gitignore
 - security.js
+- src/fontawesome-free-5.15.1-web/
 
 ## 기타
 중학교 때 완성하고 놔두다가 고등학교 때 Github에 올렸기 때문에 오류가 생길 수 있습니다. 오류 혹은 문의할 것들은 Issue 탭에 남겨주세요!

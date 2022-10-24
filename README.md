@@ -1,7 +1,7 @@
 # 카트라이더 붐힐테스트
 ## 정보
 - URL : https://villagetest.netlify.app/
-- 완성 날짜 : 2021.02
+- 완성 날짜 : 2021년
 - 제작자 : ArcoKim (kimjeongtae)
 
 ## 사용 언어
@@ -17,7 +17,7 @@
 - GOOGLE PIE CHART
 - Addthis
 
-# Gitignore
+## Gitignore
 - security.js
 - src/fontawesome-free-5.15.1-web/
 
